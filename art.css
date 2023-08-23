@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: azure;
+  --secondary--color: rgb(219, 155, 70);
+  --third-color: rgb(62, 62, 75);
+}
+.dark-mood {
+  --primary-color: rgb(44, 50, 50);
+  --secondary--color: rgb(254, 254, 254);
+  --third-color: rgb(225, 225, 233);
+}
+body {
+  background-color: var(--primary-color);
+}
+main {
+  margin: 10rem auto;
+  max-width: 620px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  color: var(--third-color);
+}
+main h1 {
+  margin-bottom: 4rem;
+}
+main .paint {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 10px grey;
+  border-radius: 15px;
+  padding-bottom: 1rem;
+  position: relative;
+}
+main .paint img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+main .paint span {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+}
+main .paint p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding: 0 1rem;
+}
+main .paint.after::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px 18px var(--secondary--color);
+  background-color: var(--secondary--color);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.1;
+}
+main .icon {
+  width: 40px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 0 1rem var(--secondary--color));
+}
